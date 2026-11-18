@@ -1,0 +1,42 @@
+{
+  "name": "pi-zyte",
+  "version": "0.1.0",
+  "description": "Fetch web pages with Zyte API from Pi",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/zytelabs/pi-zyte.git" },
+  "bugs": { "url": "https://github.com/zytelabs/pi-zyte/issues" },
+  "homepage": "https://github.com/zytelabs/pi-zyte#readme",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "zyte",
+    "web"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "scripts": {
+    "test": "node --import tsx --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^1.5.2",
+    "@types/node": "^20.19.43",
+    "tsx": "^4.23.15",
+    "typebox": "^1.4.7",
+    "typescript": "^7.0.2"
+  }
+}
