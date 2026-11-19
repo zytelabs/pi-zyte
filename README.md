@@ -17,25 +17,31 @@ Do not commit your key or paste it into a Pi conversation.
 
 ## Install
 
-For a local checkout:
+Install the npm package into Pi:
+
+```sh
+pi install npm:pi-zyte
+```
+
+This installs it for your user. Add `--local` to install it for the current project instead. To try it for one session without adding it to your Pi settings:
+
+```sh
+pi -e npm:pi-zyte
+```
+
+You can also install from a local checkout:
 
 ```sh
 pi install /absolute/path/to/pi-zyte
 ```
 
-To try without installing:
-
-```sh
-pi -e /absolute/path/to/pi-zyte/src/index.ts
-```
-
-Install from GitHub:
+Or install from GitHub:
 
 ```sh
 pi install git:github.com/zytelabs/pi-zyte
 ```
 
-Pi loads the TypeScript source directly; no build step or TypeScript installation is needed for users. Pi supplies its own extension API and TypeBox at runtime. Run `/reload` in an existing Pi session after installation. An npm package is planned but has not yet been published.
+Pi loads the TypeScript source directly; no build step or TypeScript installation is needed for users. Pi supplies its own extension API and TypeBox at runtime. Run `/reload` in an existing Pi session after installation.
 
 ## Use
 
